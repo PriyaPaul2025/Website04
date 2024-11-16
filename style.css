@@ -1,0 +1,331 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+:root{
+    --transition: all 300ms ease-in-out;
+    --dark-color: #332e29;
+    --light-color: #fff;
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button, .btn{
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--dark-color);
+}
+img{
+    width: 100%;
+    display: block;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.vh-100{
+    min-height: 100vh;
+}
+h1,h2,h3{
+    margin-top: 0;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    color: var(--light-color);
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.py-7{
+    padding: 2rem 0;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1, fr);
+    gap: 1rem;
+}
+.lead{
+    opacity: 0.8;
+    padding: 1rem 0;
+    font-size: 1.7rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+#header{
+     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url(header-banner.jpg) center no-repeat fixed;
+    background-size: cover;
+    display: flex;
+    height: 100vh;
+     justify-content: flex-start;
+    align-items: flex-end;
+}
+#header .container{
+    width: 100%;
+}
+.header-content{
+    padding-bottom: 4rem;
+}
+.header-content h1{
+    font-size: 4.5rem;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+.header-content h3{
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+}
+.social-links{
+    display: flex;
+    margin-top: 3.5rem;
+}
+.social-links li a{
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-color);
+    margin-right: 1rem;
+    border-radius: 3rem;
+    box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+.social-links li a:hover{
+    opacity: 0.9;
+}
+.about-left{
+    margin-bottom: 4rem;
+    height: 480px;
+    overflow: hidden;
+}
+.btn-down{
+    font-size: 3rem;
+    display: inline-block;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+.btn-down:hover{
+    opacity: 0.8;
+    transform: translateY(5px);
+}
+.btn-down-white{
+    color: var(--dark-color);
+}
+.title{
+    margin-bottom: 5rem;
+}
+.title h2{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    position: relative;
+    color: var(--dark-color);
+}
+.title h2::after{
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background-color: var(--dark-color);
+}
+.portfolio-grid > div{
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.portfolio-grid > div:hover{
+    transform: scale(0.9);
+}
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding-top: 2rem;
+}
+.portfolio-grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+#portfolio{
+     padding: 7rem 0; 
+     background-color: black;
+}
+.title1{
+    color: var(--light-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    position: relative;
+}
+.title1 h2::before{
+    position: absolute;
+    content: "";
+    top: 40px;
+    left: 0;
+    width: 70px;
+    height: 4px;
+    background-color: var(--light-color);
+}
+#contact{
+    background-color: rgb(248, 248, 248);
+    min-height: 100vh;
+}
+#contact .title h2{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    position: relative;
+    margin-top: 10px;
+}
+.contact-content{
+    flex-direction: column;
+    align-items: stretch;
+}
+.contact-left{
+    margin-bottom: 5rem;
+}
+.contact-left .lead{
+    margin-top: 2px;
+    padding: 1rem;
+}
+.contact-left form{
+    margin-top: 3rem;
+}
+.contact-left form .form-control{
+    display: block;
+    margin: 3rem 0;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    width: 100%;
+}
+.contact-left form .form-control::placeholder{
+    font-size: 15px;
+}
+.contact-left .btn-submit{
+    padding: 2rem 3rem;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    margin-top: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    transition: var(--transition);
+}
+.contact-left .btn-submit:hover{
+    background-color: #000;
+}
+#insta{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), 
+    url('insta-pic.jpg') center no-repeat fixed;
+min-height: 65vh;
+}
+#insta .title h2{
+    color: var(--light-color);
+}
+#insta .title h2::after{
+    background-color: var(--light-color);
+}
+.insta-grid > div{
+    height: 400px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+.insta-grid > div img{
+    height: 100%;
+    object-fit: cover;
+}
+.insta-grid > div:hover{
+    transform: scale(0.9);
+}
+.footer{
+    background-color:black;
+    color: var(--light-color);
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.footer .container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.footer-left{
+    font-size: 1.2rem;
+}
+@media (max-width: 767px) {
+    html {
+        font-size: 12px;    }
+    .portfolio-grid {
+        grid-template-columns: 1fr;     }
+    .contact-content {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+    }
+    .contact-left form .form-control {
+        margin: 1rem 0;
+    }
+    .btn-submit {
+        width: 100%; 
+    }
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+html {
+    font-size: 14px;     
+}
+.portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);     
+}
+.contact-content {
+    width: 90%;
+}
+.contact-left form .form-control {
+    margin: 2rem 0;
+}
+.btn-submit {
+    width: 100%;
+}
+.footer .container {
+    flex-direction: column;
+    text-align: center;
+}
+}
+@media (min-width: 1025px) {
+html {
+    font-size: 16px;     
+}
+.portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);     
+}
+.contact-content {
+     width: 100%;
+}
+.footer .container {
+justify-content: space-between;
+}
+}
